@@ -1,129 +1,140 @@
-:root {
-    --pink-light: #fff0f5;
-    --pink-soft: #ffb7d5;
-    --fuchsia-soft: #ff80bf;
-    --dark-purple: #4b0082;
+body {
+    margin: 0;
+    padding: 20px;
+    background-color: #fce4ec; /* Rosa suave de fondo */
+    background-image: url('pattern-kitty.png'); /* Fondo de Hello Kitty opcional */
+    background-size: 200px;
+    font-family: 'Fredoka', sans-serif;
+    display: flex;
+    justify-content: center;
 }
 
-body {
-    background-color: #fce4ec;
-    background-image: radial-gradient(var(--pink-soft) 0.5px, transparent 0.5px);
-    background-size: 15px 15px;
-    color: var(--dark-purple);
-    font-family: 'Gaegu', cursive;
-    margin: 0;
+.main-container {
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* --- TARJETA PRINCIPAL (BANNER) --- */
+.hero-card {
+    background: white;
+    border-radius: 20px;
+    padding: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border: 2px dashed #ffb7d5;
+}
+
+.banner-box {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    height: 300px;
+}
+
+.banner-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay-content {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(255, 255, 255, 0.2); /* Brillo suave sobre la imagen */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
 }
 
-/* --- Banner y Logo --- */
-.banner-container {
-    position: relative;
-    width: 100%;
-    max-height: 400px;
-    overflow: hidden;
-    border-bottom: 5px solid white;
+.main-logo {
+    width: 100px;
+    filter: drop-shadow(0 0 10px white);
 }
 
-.main-banner {
-    width: 100%;
-    height: auto;
-    filter: brightness(0.9);
-}
-
-.logo-overlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: rgba(255, 255, 255, 0.8);
-    padding: 20px;
-    border-radius: 50%;
-    border: 4px solid var(--fuchsia-soft);
-    box-shadow: 0 0 20px rgba(0,0,0,0.1);
-}
-
-.official-logo {
-    width: 120px;
-    height: auto;
-}
-
-/* --- Títulos --- */
-h1 {
-    font-family: 'Fredoka', sans-serif;
+.pink-title {
+    color: #ff69b4;
     font-size: 3rem;
-    color: var(--fuchsia-soft);
-    margin-top: 20px;
+    margin: 10px 0 0 0;
     text-shadow: 2px 2px white;
 }
 
-.subtitle {
-    font-size: 1.4rem;
-    color: var(--dark-purple);
-    margin-bottom: 30px;
+/* --- BOTONES --- */
+.nav-bar {
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 0;
 }
 
-/* --- Botones Navegación --- */
-nav a {
-    background: white;
-    color: var(--fuchsia-soft);
-    padding: 10px 20px;
+.nav-btn {
     text-decoration: none;
-    border-radius: 15px;
-    font-family: 'Fredoka', sans-serif;
-    margin: 5px;
-    display: inline-block;
-    border: 2px solid var(--fuchsia-soft);
-    transition: 0.3s;
+    background: #fff0f5;
+    color: #4b0082;
+    padding: 10px 20px;
+    border-radius: 12px;
+    font-weight: bold;
+    border: 2px solid #ffb7d5;
+    box-shadow: 0 4px 0 #ffb7d5;
+    transition: 0.2s;
 }
 
-nav a:hover {
-    background: var(--fuchsia-soft);
-    color: white;
-    transform: translateY(-3px);
+.nav-btn:hover {
+    transform: translateY(2px);
+    box-shadow: 0 2px 0 #ffb7d5;
 }
 
-/* --- Tarjetas --- */
-.card {
-    background: white;
-    margin: 30px auto;
-    padding: 25px;
-    width: 80%;
-    max-width: 600px;
-    border-radius: 30px;
-    border: 3px dashed var(--pink-soft);
-    box-shadow: 0 10px 0 var(--pink-soft);
-}
-
-.highlight {
-    background: var(--pink-light);
-    border: 3px solid var(--fuchsia-soft);
-}
-
-.mission-list {
-    list-style: none;
-    padding: 0;
-    text-align: left;
-    display: inline-block;
-}
-
-.mission-list li {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-}
-
-.big-button {
+.twitter-btn {
     background: #1DA1F2;
     color: white;
-    padding: 15px 30px;
-    text-decoration: none;
-    border-radius: 50px;
-    display: inline-block;
-    font-family: 'Fredoka', sans-serif;
-    margin-top: 15px;
+    border-color: #0d8bd9;
     box-shadow: 0 4px 0 #0d8bd9;
 }
 
+/* --- TARJETAS DE CONTENIDO --- */
+.content-card {
+    background: white;
+    border-radius: 20px;
+    padding: 20px;
+    border: 2px dashed #ffb7d5;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.card-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.small-icon {
+    width: 40px;
+}
+
+.goals-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.goals-list {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    font-size: 0.9rem;
+}
+
+.center-img {
+    width: 120px;
+}
+
 footer {
-    padding: 40px;
-    opacity: 0.6;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #ff69b4;
+    padding: 20px;
 }
