@@ -1,63 +1,189 @@
+/* --- Reseteo y Fuentes --- */
 body {
-    background-color: #ff00ff; /* Fucsia base */
-    background-image: radial-gradient(#ff66cc 1px, transparent 1px);
-    background-size: 20px 20px; /* Efecto puntitos retro */
-    color: #fff;
-    font-family: 'Lexend Mega', sans-serif;
+    background-color: #fff0f5; /* Lavander Blush (Súper suave) */
+    background-image: url('https://i.imgur.com/M6Lg7Vl.png'); /* Fondo patrón suave de Hello Kitty/Estrellas */
+    background-size: 200px;
+    color: #4b0082; /* Indigo oscuro para leer bien */
+    font-family: 'Gaegu', cursive; /* Fuente tierna */
+    font-size: 1.2rem;
     margin: 0;
     text-align: center;
 }
 
 h1, h2 {
-    font-family: 'Cherry Bomb One', cursive;
-    text-shadow: 3px 3px 0px #4b0082; /* Sombra morada oscura */
+    font-family: 'Fredoka One', cursive; /* Fuente gordita para títulos */
+    color: #ff80bf; /* Fucsia suave */
+    text-shadow: 2px 2px 0px rgba(75, 0, 130, 0.2);
 }
 
+/* --- Sparkles Overlay --- */
+.sparkle-overlay {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-image: url('https://i.imgur.com/W2o9jN8.png'); /* Imagen de brillitos transparentes */
+    pointer-events: none;
+    opacity: 0.5;
+    z-index: 100;
+}
+
+/* --- Header --- */
 header {
-    padding: 50px 20px;
-    background: rgba(0, 0, 0, 0.2);
+    padding: 60px 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border-bottom: 5px dashed #ff80bf;
+}
+
+.header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 }
 
 .kitty-chief {
-    width: 80px;
-    filter: drop-shadow(0 0 10px #fff);
+    width: 90px;
+    filter: drop-shadow(0 0 5px #ff80bf);
 }
 
+.chiikawa-soldier {
+    width: 80px;
+}
+
+.subtitle {
+    font-style: italic;
+    color: #ff66a3;
+}
+
+/* --- Navegación --- */
+nav {
+    margin-top: -25px;
+}
+
+nav a {
+    background: #ff80bf;
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 25px;
+    margin: 5px;
+    display: inline-block;
+    font-family: 'Fredoka One', cursive;
+    transition: 0.3s;
+    border: 3px solid #fff;
+    box-shadow: 0 4px 0 #4b0082;
+}
+
+nav a:hover {
+    transform: scale(1.05) translateY(2px);
+    background: #4b0082;
+    box-shadow: 0 2px 0 #ff80bf;
+}
+
+nav a.tw-link {
+    background: #1DA1F2; /* Color Twitter */
+}
+
+/* --- Tarjetas (Secciones) --- */
 .card {
-    background: rgba(255, 255, 255, 0.9);
-    color: #d0006f;
-    margin: 20px auto;
-    padding: 20px;
-    width: 80%;
-    max-width: 600px;
-    border: 4px solid #4b0082;
-    border-radius: 15px;
-    box-shadow: 10px 10px 0px #ff66cc;
+    background: rgba(255, 255, 255, 0.95);
+    margin: 40px auto;
+    padding: 30px;
+    width: 85%;
+    max-width: 700px;
+    border: 3px solid #ff80bf;
+    border-radius: 30px;
+    box-shadow: 8px 8px 0px rgba(255, 128, 191, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.card-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.icon-small {
+    width: 40px;
+}
+
+.evil-laugh {
+    font-size: 0.8rem;
+    color: #4b0082;
+    opacity: 0.7;
 }
 
 .highlight {
     background: #ffdeef;
-    border-style: dashed;
+    border: 4px dashed #4b0082;
 }
 
-nav a {
-    background: #4b0082;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 20px;
-    margin: 5px;
-    display: inline-block;
-    transition: 0.3s;
-}
-
-nav a:hover {
-    transform: scale(1.1) rotate(-3deg);
-    background: #ff00ff;
-}
-
-ul {
-    list-style: "🎀 ";
+/* --- Listas de Misiones --- */
+.mission-list {
+    list-style: none;
     text-align: left;
     display: inline-block;
+    padding: 0;
+}
+
+.mission-list li {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.bullet {
+    font-size: 1.5rem;
+    margin-right: 15px;
+}
+
+/* --- Imágenes en tarjetas --- */
+.card-image {
+    width: 150px;
+    margin-top: 20px;
+}
+
+.card-image-bottom {
+    width: 120px;
+    margin-top: 20px;
+}
+
+/* --- Botón Grande --- */
+.big-button {
+    background: #4b0082;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 50px;
+    display: inline-block;
+    font-family: 'Fredoka One', cursive;
+    font-size: 1.3rem;
+    margin-top: 15px;
+    transition: 0.3s;
+    border: 4px solid #ff80bf;
+}
+
+.big-button:hover {
+    background: #ff80bf;
+    border-color: #4b0082;
+    transform: scale(1.1);
+}
+
+.subtext {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* --- Footer --- */
+footer {
+    padding: 40px;
+    background: rgba(75, 0, 130, 0.1);
+    border-top: 3px solid #ff80bf;
+    font-size: 0.9rem;
+}
+
+.disclaimer {
+    font-size: 0.7rem;
+    color: #ff66a3;
 }
